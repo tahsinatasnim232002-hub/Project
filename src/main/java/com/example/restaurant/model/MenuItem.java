@@ -12,4 +12,8 @@ public class MenuItem {
     private boolean available;
     private String imageUrl;
     // getters & setters
+
+    public void setId(Long id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
