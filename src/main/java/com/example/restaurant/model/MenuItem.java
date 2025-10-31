@@ -1,9 +1,11 @@
- package com.example.restaurant.model;
+package com.example.restaurant.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-@Table(name = "menu_items")
 public class MenuItem {
 
     @Id
@@ -16,11 +18,8 @@ public class MenuItem {
     private boolean available;
     private String imageUrl;
 
-    // Default constructor
-    public MenuItem() {
-    }
+    public MenuItem() {}
 
-    // Convenience constructor
     public MenuItem(String name, String description, double price, boolean available, String imageUrl) {
         this.name = name;
         this.description = description;
@@ -29,12 +28,10 @@ public class MenuItem {
         this.imageUrl = imageUrl;
     }
 
-    // Getters & Setters
     public Long getId() {
         return id;
     }
 
-    // <-- এখানে ঠিকভাবে setId করা হয়েছে -->
     public void setId(Long id) {
         this.id = id;
     }
@@ -77,15 +74,5 @@ public class MenuItem {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
-    }
-
-    @Override
-    public String toString() {
-        return "MenuItem{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", available=" + available +
-                '}';
     }
 }
